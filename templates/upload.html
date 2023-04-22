@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brain Tumor Detection</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="">
+        <a class="" href="#"><h1>Brain Tumor Detection</h1></a>
+
+    </nav>
+    <div class="form">
+        <form id="upload-form" action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+            <div class="">
+                <div class="">
+
+                    <h3 class="">Upload MRI image of Brain: </h3>
+                    <!-- <input id="file-picker" type="file" name="file" accept="image/*" multiple> -->
+                    <input id="file-picker" type="file" name="file" accept="image/*" required>
+
+                    <div class="submit-button">
+                        <button type="submit"  id="upload-button">Check Tumor Status</button>
+                    </div>
+        </form>
+        </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

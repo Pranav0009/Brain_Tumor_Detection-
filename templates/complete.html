@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Brain Tumor Detection</title>
+    <link
+      type="text/css"
+      href="{{ url_for('static', filename='css/index.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <a href="/"><h1>Brain Tumor Detection</h1></a>
+    </nav>
+    <div class="result">
+      <div class="details">
+        <h3 class="">Result</h3>
+
+        <img
+          src="static/images/{{ image_name }}"
+          height="300px"
+          style="
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+            border-radius: 0.5rem;
+          "
+        />
+
+        {% if predvalue %}
+        <h3>Result: <span style="color: red">Brain Tumor detected!!!</span></h3>
+        {% else %}
+        <h4>Result: <span style="color: green">No Brain Tumor</span></h4>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
