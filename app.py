@@ -2,16 +2,12 @@ import os
 from flask import Flask, render_template, request
 from predictor import check
 
-
-author = 'TEAM DELTA'
-
 app = Flask(__name__, static_folder="static")
 app.debug = True
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
 @app.route('/')
-@app.route('/index')
 def index():
     return render_template('upload.html')
 
