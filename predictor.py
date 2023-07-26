@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 saved_model = load_model("model/model.h5")
 status = True
 
-
+print('here',saved_model)
 def check(input_img):
     print(" your image is : " + input_img)
     print(input_img)
